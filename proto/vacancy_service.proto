@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "cyrex/vacancies/pb";
+import "vacancy.proto";
+import "rpc_create_vacancy.proto";
+import "rpc_update_vacancy.proto";
+
+service VacancyService {
+  rpc CreateVacancy(CreateVacancyRequest) returns (VacancyResponse) {}
+  rpc GetVacancy(VacancyRequest) returns (VacancyResponse) {}
+  rpc GetVacancies(GetVacanciesRequest) returns (stream Vacancy) {}
+  rpc UpdateVacancy(UpdateVacancyRequest) returns (VacancyResponse) {}
+  rpc DeleteVacancy(VacancyRequest) returns (DeleteVacancyResponse) {}
+}
+
+message GetVacanciesRequest {
+  optional int64 page = 1;
+  optional int64 limit = 2;
+}
+
+message VacancyRequest { string Id = 1; }
+
+message DeleteVacancyResponse { bool success = 1; }

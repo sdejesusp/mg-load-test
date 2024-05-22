@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "cyrex/vacancies/pb";
+import "vacancy.proto";
+
+message UpdateVacancyRequest {
+  string Id = 1;
+  optional string Title = 2;
+  optional string Description = 3;
+  optional int32 Views = 4;
+  optional Vacancy.DIVISION Division = 5;
+  optional string Country = 6;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "cyrex/vacancies/pb";
+import "google/protobuf/timestamp.proto";
+
+message Vacancy {
+  enum DIVISION {
+    DEVELOPMENT = 0;
+    SECURITY = 1;
+    SALES = 2;
+    OTHER = 3;
+  }
+
+  string Id = 1;
+  string Title = 2;
+  string Description = 3;
+  int32 Views = 4;
+  DIVISION Division = 5;
+  string Country = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
+
+message VacancyResponse { Vacancy vacancy = 1; }
