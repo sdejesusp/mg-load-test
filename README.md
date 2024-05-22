@@ -20,4 +20,4 @@ After that, go to http://localhost:8089
 
 ![web-locust-charts-1](https://github.com/sdejesusp/mg-load-test/assets/36713176/85e0d6f5-ec9a-4a69-bd7c-898533240db3)
 
-The Locust Test Report can be found here. 
+The Locust Test Report can be found [here](https://github.com/sdejesusp/mg-load-test/blob/main/docs/report_1716403955.6152499.html) 
